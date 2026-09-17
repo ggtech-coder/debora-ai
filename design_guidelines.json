@@ -1,0 +1,134 @@
+{
+  "theme_and_identity": {
+    "brand_name": "Débora.ai",
+    "emotional_tone": "Sophisticated, Trustworthy, High-Performance, Luxury meets Swiss Clarity",
+    "archetype": "Organic & Earthy (Light) / Luxury (Dark)",
+    "description": "A top-tier SaaS ERP MVP for real estate brokerages (imobiliárias), featuring CRM pipelines, deep analytics, and multi-tenant management. Must feel like a high-end financial or luxury real estate tool, completely avoiding generic 'AI startup' slop."
+  },
+  "typography": {
+    "headings": {
+      "family": "Outfit",
+      "import_url": "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap",
+      "rules": "Used for all H1-H4. Must use tracking-tight for H1-H2. H1 max text-5xl."
+    },
+    "body": {
+      "family": "Manrope",
+      "import_url": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap",
+      "rules": "Highly legible geometric sans for data grids, labels, and standard text."
+    },
+    "mono": {
+      "family": "JetBrains Mono",
+      "rules": "Used for IDs, numerical KPIs, and technical data."
+    }
+  },
+  "colors": {
+    "light": {
+      "background": "#F8F9F7",
+      "surface": "#FFFFFF",
+      "primary": "#0F4C3A",
+      "primary_hover": "#0A3B2C",
+      "accent": "#C49A45",
+      "text_main": "#1A1D1C",
+      "text_muted": "#6E7774",
+      "border": "#E5E8E7"
+    },
+    "dark": {
+      "background": "#0A0C0B",
+      "surface": "#121514",
+      "primary": "#187A60",
+      "primary_hover": "#1F9677",
+      "accent": "#D4AF37",
+      "text_main": "#F3F5F4",
+      "text_muted": "#8B9591",
+      "border": "#232826"
+    },
+    "status": {
+      "success": "#22C55E",
+      "warning": "#F59E0B",
+      "danger": "#EF4444",
+      "info": "#3B82F6"
+    }
+  },
+  "spacing_and_layout": {
+    "general": "Generous Spacing Philosophy. Use 2-3x more spacing. Containers with borders must have internal padding p-6 or p-8.",
+    "sidebar": "Collapsible sidebar. Fixed width 280px when open, 80px when closed. Should feature grouped modules.",
+    "topbar": "Sticky header (z-50) with glassmorphism (backdrop-blur-xl bg-white/70 or bg-[#0A0C0B]/70). Must contain breadcrumbs, global search, notifications, and user menu.",
+    "dashboard_grid": "Bento Grid Pattern for KPIs. 4 columns on desktop (grid-cols-1 md:grid-cols-4). Tight gap (gap-6) for high-density. Summary cards span 1, charts span 2 or 3.",
+    "crm_kanban": "Horizontal scrolling flex container with gap-6. Each column represents a deal stage. Cards inside columns use cursor-grab and subtle hover lift.",
+    "corners": "Subtle roundness. Use rounded-lg (8px) globally to maintain a professional, sharp aesthetic."
+  },
+  "components": {
+    "cards": "Flat background, 1px subtle border (border-border), no massive drop shadows. Hover states should feature a slight lift (-translate-y-1) and shadow-md.",
+    "buttons": "Rounded-md. Primary buttons use the deep forest green in light mode, with white text. NEVER use generic blue. Hover states must transition cleanly.",
+    "tables": "Dense rows using TanStack Table. Left-align text, right-align numbers. Hover states on rows: bg-muted/50. 1px border-b per row.",
+    "forms": "Inputs use rounded-md, 1px border. Focus states: ring-2 ring-primary/30. Floating labels or clean top labels. NO native datepickers (use Shadcn Calendar).",
+    "empty_states": "Centered content with a subtle Lucide icon (stroke-width 1.5, text-muted-foreground), clear heading, and primary CTA. Max width 400px."
+  },
+  "visual_enhancers": {
+    "glassmorphism": "Use for Sticky Headers. Light: backdrop-blur-xl bg-white/70 border-b border-border/50. Dark: backdrop-blur-xl bg-[#0A0C0B]/70 border-b border-white/10.",
+    "shadows": "Ambient + direct shadows. Very soft and diffuse.",
+    "icons": "lucide-react (stroke-width: 1.5 for elegance).",
+    "charts": "recharts. Use customized tooltips with dark background and small text. Remove standard grid lines, use dashed lines or none.",
+    "motion": "Use framer-motion for page transitions and staggering list items. transition: transform 0.2s ease, opacity 0.2s ease."
+  },
+  "images": {
+    "property_exteriors": [
+      {
+        "url": "https://images.pexels.com/photos/7031581/pexels-photo-7031581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "inventory_card"
+      },
+      {
+        "url": "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "inventory_card"
+      }
+    ],
+    "property_interiors": [
+      {
+        "url": "https://images.pexels.com/photos/8135492/pexels-photo-8135492.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "inventory_card"
+      },
+      {
+        "url": "https://images.pexels.com/photos/6585598/pexels-photo-6585598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "inventory_card"
+      }
+    ],
+    "avatars": [
+      {
+        "url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMHBvcnRyYWl0fGVufDB8fHx8MTc4NDgwOTM0OHww&ixlib=rb-4.1.0&q=85",
+        "category": "agent_profile"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMHBvcnRyYWl0fGVufDB8fHx8MTc4NDgwOTM0OHww&ixlib=rb-4.1.0&q=85",
+        "category": "client_profile"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMHBvcnRyYWl0fGVufDB8fHx8MTc4NDgwOTM0OHww&ixlib=rb-4.1.0&q=85",
+        "category": "agent_profile"
+      }
+    ]
+  },
+  "implementation_notes_for_main_agent": [
+    "Use Tailwind CSS variables for colors to natively support Light and Dark themes via 'next-themes' or manual class on html.",
+    "Map the provided hex codes to HSL in index.css (e.g., :root { --background: 144 10% 97%; } and .dark { --background: 150 10% 4%; }).",
+    "Avoid generic AI slop. The dashboard should look like a highly functional, expensive ERP. Do NOT use purple gradients.",
+    "Do NOT center align the app container. Ensure left alignment for all data tables and main content.",
+    "Use Shadcn UI extensively. Write the components in Javascript (.jsx/.js files), as no TS is used.",
+    "Ensure all interactive elements have data-testid attributes for testing.",
+    "For 'TV Mode', provide a view that hides sidebar/topbar and scales up KPIs fullscreen with dark mode forcefully active.",
+    "Multi-tenant seletor de empresa (Company selector) should be prominently placed at the top of the sidebar."
+  ],
+  "accessibility": {
+    "contrast": "Ensure minimum 4.5:1 ratio for normal text.",
+    "focus": "All actionable items must have a focus ring: focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You MUST NOT apply universal transition (e.g., transition: all).",
+    "You MUST NOT center align the app container in CSS (.App { text-align: center; } is banned).",
+    "Every interaction needs micro-animations - hover states, transitions.",
+    "Always use modern button styles, crisp edges, minimal border radius (max 8px).",
+    "Use sonner for toasts.",
+    "NEVER use generic placeholder images (via.placeholder.com etc.), only use the ones provided in the images section.",
+    "All components must be .js/.jsx, do not generate .tsx files.",
+    "CRITICAL: DO NOT use complete transparent background in header, overlays, or dropdowns. Always use solid or heavily blurred backgrounds."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "summary": "Débora.ai MVP frontend smoke tested. All critical flows working: login (mock auth), dashboard KPIs, theme toggle (dark/light), sidebar collapse, tenant selector, notifications+mark-all-read, Leads CRUD + rotation, CRM Kanban (6 cols/18 cards) + tab switch + funnels, Inventory (18 property cards), TV mode w/ back nav, Finance, 11 secondary routes, all 8 placeholder pages, logout. No blocking console errors. Note: initial 502 Bad Gateway was transient during frontend restart; retried and succeeded.",
+  "tested_scope": ["frontend"],
+  "passed": [
+    "login with debora@prime.com / demo1234 redirects to Dashboard",
+    "Dashboard shows kpi-vgv, kpi-deals, kpi-leads, kpi-conversion + charts",
+    "theme-toggle switches document.documentElement 'dark' class",
+    "sidebar-toggle collapse/expand works",
+    "tenant-selector present in sidebar",
+    "notifications-btn opens popover, mark-all-read clears items",
+    "/leads: search, btn-new-lead → lead-name → save-lead flow works",
+    "/leads: btn-rotate triggers rotation",
+    "/crm: 6 kanban-col-* columns, 18 deal-card-* cards; tab-list ↔ tab-kanban switch",
+    "/crm: funnel-f1 and funnel-f2 present",
+    "/inventory: 18 property-card-* rendered",
+    "/tv: renders + tv-back navigates back to dashboard",
+    "/finance: KPIs and cash-flow chart render",
+    "Secondary routes load: /calendar /clients /documents /reports /settings /customization /notifications /plan /account /admin-master /lead-rotation",
+    "All 8 placeholder pages (inbox, whatsapp, instagram, chatbot, marketing, automations, ai, sites) render with proper testids",
+    "user-menu → logout-btn returns to /login"
+  ],
+  "failed": [],
+  "action_items": [
+    "Minor: React warning 'Cannot update a component while rendering' from Login.jsx line 16 (nav('/') called during render when isAuthenticated). Non-blocking but should be moved into useEffect."
+  ],
+  "success_rate": {"backend": "n/a (frontend-only test)", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true
+}
